@@ -1,0 +1,27 @@
+version: "3.7"
+
+services:
+    playground-golang:
+        #path do projeto a ser buildado
+        build:
+          context: ../.
+          dockerfile: docker/Dockerfile  #o path aqui eh apartir do context
+        environment:
+          - DEBUG=1
+        # ports:
+            # - "8091:8080"
+        # volume no container a ser gerado. Ao ser gerado o container o projeto ficar na pasta app
+        # o path do source (antes dos : )
+        volumes:
+            - ../:/opt/app
+        # depends_on:
+        networks:
+          - blockchain-net
+        entrypoint: /bin/sh
+        tty: true
+
+
+networks:
+  blockchain-net:
+     driver: bridge
+

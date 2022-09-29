@@ -1,0 +1,6 @@
+go 1.19
+
+use (
+	./day1/ex1
+	./day1/ex1_solved
+)
