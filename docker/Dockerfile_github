@@ -6,11 +6,11 @@ ENV GO111MODULE=on
 ENV CGO_ENABLED=0
 ENV GOOS=linux
 ENV GOARCH=amd64
-ENV PATH=$PATH:$HOME/go/bin
+
+WORKDIR /opt/app
 
 RUN go install github.com/jstemmer/go-junit-report@latest
 
-WORKDIR /opt/app
 
 ARG USERNAME=user
 ARG USER_UID=1000
@@ -33,5 +33,9 @@ RUN chown -R $USERNAME /opt/app
 
 USER $USERNAME
 WORKDIR /opt/app
+
+RUN echo -e '\
+source /opt/app/assets/scripts/.bashrc_append\
+' >> ~/.bashrc
 
 # CMD ["/bin/bash"]

@@ -1,0 +1,4 @@
+
+export PATH=/usr/local/go/bin:$PATH
+
+PS1=$'`export XIT=$? \\\n        && [ ! -z "${GITHUB_USER}" ] && echo -n "\\[\\033[0;32m\\]@${GITHUB_USER} " || echo -n "\\[\\033[0;32m\\]\\u " \\\n        && [ "$XIT" -ne "0" ] && echo -n "\\[\\033[1;31m\\][\\h]➜" || echo -n "\\[\\033[0m\\][\\h]➜"` \\[\\033[1;34m\\]\\w `\\\n        export BRANCH=$(git symbolic-ref --short HEAD 2>/dev/null || git rev-parse --short HEAD 2>/dev/null); \\\n        if [ "${BRANCH}" != "" ]; then \\\n            echo -n "\\[\\033[0;36m\\](\\[\\033[1;31m\\]${BRANCH}" \\\n            && if git ls-files --error-unmatch -m --directory --no-empty-directory -o --exclude-standard ":/*" > /dev/null 2>&1; then \\\n                    echo -n " \\[\\033[1;33m\\]✗"; \\\n               fi \\\n            && echo -n "\\[\\033[0;36m\\]) "; \\\n        fi`\\[\\033[0m\\]$ '

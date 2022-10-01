@@ -22,7 +22,7 @@ jobs:
     #   run: docker run --network container:playground-golang go build -v ./...
 
     - name: Test
-      run: docker exec -t playground-golang go test -v example.com/hello | $HOME/go/bin/go-junit-report -set-exit-code > report.xml
+      run: docker exec -t playground-golang go test -v example.com/hello | go-junit-report -set-exit-code > report.xml
 
     - name: Test Summary
       uses: test-summary/action@v1

@@ -10,6 +10,7 @@ ENV GOARCH=amd64
 
 WORKDIR /opt/app
 
+RUN go install github.com/jstemmer/go-junit-report@latest
 RUN go install -v github.com/cweill/gotests/gotests@latest && \
 go install -v github.com/fatih/gomodifytags@latest && \
 go install -v github.com/josharian/impl@latest && \
@@ -39,5 +40,9 @@ RUN chown -R $USERNAME /opt/app
 
 USER $USERNAME
 WORKDIR /opt/app
+
+RUN echo -e '\
+source /opt/app/assets/scripts/.bashrc_append\
+' >> ~/.bashrc
 
 CMD ["/bin/bash"]
