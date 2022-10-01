@@ -2,6 +2,7 @@ version: "3.7"
 
 services:
     playground-golang:
+        container_name: playground-golang
         #path do projeto a ser buildado
         build:
           context: ../.

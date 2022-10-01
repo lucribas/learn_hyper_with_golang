@@ -6,7 +6,7 @@ services:
         #path do projeto a ser buildado
         build:
           context: ../.
-          dockerfile: docker/Dockerfile  #o path aqui eh apartir do context
+          dockerfile: docker/Dockerfile_github  #o path aqui eh apartir do context
         environment:
           - DEBUG=1
         # ports:
