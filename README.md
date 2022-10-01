@@ -1,6 +1,8 @@
 
+![Gopher](assets/images/gopher.png)
 
 # Requirements
+
 - Docker
 - GIT
 
@@ -18,3 +20,7 @@ cd learn_hyper_with_golang
 cd day1
 code .
 ```
+
+
+References:
+- https://www.digitalocean.com/community/tutorials/defining-structs-in-go

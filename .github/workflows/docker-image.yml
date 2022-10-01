@@ -1,0 +1,25 @@
+name: Docker Image CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Build the Docker image
+      run: docker-compose -f docker/docker-compose_github.yml up -d
+
+    # - name: Build
+    #   run: docker run --network container:playground-golang go build -v ./...
+
+    - name: Test
+      run: docker exec -it playground-golang go test example.com/hello
