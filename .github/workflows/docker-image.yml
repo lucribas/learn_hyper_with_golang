@@ -13,11 +13,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v3
 
     - name: Build the Docker image
       run: docker-compose -f docker/docker-compose_github.yml up -d
 
-    - uses: actions/checkout@v3
     # - name: Build
     #   run: docker run --network container:playground-golang go build -v ./...
 
