@@ -41,7 +41,7 @@ RUN chown -R $USERNAME /opt/app
 USER $USERNAME
 WORKDIR /opt/app
 
-RUN echo -e '\
+RUN echo '\
 source /opt/app/assets/scripts/.bashrc_append\
 ' >> ~/.bashrc
 
