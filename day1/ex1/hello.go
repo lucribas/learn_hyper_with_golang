@@ -6,7 +6,7 @@ import (
 
 // TODO: FAZER UMA FUNÇÃO QUE RETORNA UMA STRING "HELLO"
 func Hello() string {
-	return "HELLOoo"
+	return "HELLO"
 }
 
 func main() {
