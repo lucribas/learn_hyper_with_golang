@@ -33,13 +33,17 @@ sudo apt install docker-compose
 sudo usermod -a -G docker $USER
 sudo apt install gconf2 gconf-service libappindicator1
 ```
-- Dockstation (Optional)
+
+- Vscode
+  Install vscode from link: [vscode]](https://code.visualstudio.com/)
+  Install extension:
+    + Dev Containers extension: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
+
+- (on Linux only) Dockstation (Optional)
 ```bash
 wget -c https://github.com/DockStation/dockstation/releases/download/v1.5.1/dockstation_1.5.1_amd64.deb
 sudo dpkg -i dockstation_1.5.1_amd64.deb
 ```
-- [Vscode](https://code.visualstudio.com/)
-  + Dev Containers extension: https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers
 
 
 # Initial Setup
