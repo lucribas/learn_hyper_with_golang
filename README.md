@@ -45,7 +45,7 @@ sudo dpkg -i dockstation_1.5.1_amd64.deb
 # Initial Setup
 
 ```bash
-git clone git@github.com:lucribas/learn_hyper_with_golang.git
+git clone https://github.com/lucribas/learn_hyper_with_golang.git
 cd learn_hyper_with_golang
 ```
 
