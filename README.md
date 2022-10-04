@@ -29,10 +29,13 @@ sudo apt install git
 ```
 - Docker
 ```bash
-sudo apt install docker-compose
+sudo apt install docker docker-compose
 sudo usermod -a -G docker $USER
 sudo apt install gconf2 gconf-service libappindicator1
 ```
+
+No windows seguir o [tutorial](https://medium.com/codigorefinado/docker-no-linux-dentro-do-windows-10-com-wsl-2-f52b91931267)
+
 
 - Vscode
   Install vscode from link: [vscode]](https://code.visualstudio.com/)
