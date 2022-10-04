@@ -17,8 +17,15 @@ https://ubuntu.com/wsl
 
 ## Windows (WSL + Ubuntu 20.04) / Linux (Ubuntu 20.04+)
 
+Initial setup
+```bash
+sudo apt update
+```
+
+
 - GIT
 ```bash
+sudo apt update
 sudo apt install git
 ```
 - Docker
