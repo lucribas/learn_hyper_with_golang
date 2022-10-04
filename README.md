@@ -25,13 +25,12 @@ sudo apt update
 
 - GIT
 ```bash
-sudo apt update
 sudo apt install git
 ```
 - Docker
 ```bash
 sudo apt install docker-compose
-sudo usermod -a -G docker lus
+sudo usermod -a -G docker $USER
 sudo apt install gconf2 gconf-service libappindicator1
 ```
 - [Dockstation](https://github.com/DockStation/dockstation/releases/download/v1.5.1/dockstation_1.5.1_amd64.deb) (Optional)
