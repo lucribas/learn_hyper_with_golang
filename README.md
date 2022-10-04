@@ -10,6 +10,13 @@ Learning Golang by examples with TDD
 
 # Requirements
 
+## Windows
+
+Install WSL with Ubuntu 20.04:
+https://ubuntu.com/wsl
+
+## Windows (WSL + Ubuntu 20.04) / Linux (Ubuntu 20.04+)
+
 - GIT
 ```bash
 sudo apt install git
