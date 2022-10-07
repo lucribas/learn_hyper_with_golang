@@ -5,6 +5,7 @@ import (
 	"encoding/hex"
 	"encoding/json"
 	"fmt"
+	"strings"
 	"time"
 )
 
@@ -13,12 +14,13 @@ type Block struct {
 	PreviousHash string
 	Hash         string
 	Data         map[string]interface{}
+	Nounce       int
 }
 
 type Blockchain struct {
 	GenesisBlock Block
 	Chain        []Block
-	Pow          int
+	Dificuldade  int
 }
 
 func CreateBlockchain(dificuldade int) Blockchain {
@@ -29,14 +31,22 @@ func CreateBlockchain(dificuldade int) Blockchain {
 	return Blockchain{
 		GenesisBlock: genesis,
 		Chain:        []Block{genesis},
-		Pow:          dificuldade,
+		Dificuldade:  dificuldade,
 	}
 }
 
 func (b Block) calcularHash() string {
-	dado, _ := json.Marshal(b.Data)
+	dado, _ := json.Marshal(b)
 	hash := sha256.Sum256(dado)
 	return hex.EncodeToString(hash[:])
+}
+
+// procura o Block.Nounce até o hash do block começar com o numero de zeros igual a dificuldade
+func (b *Block) minerar(difficulty int) {
+	for !strings.HasPrefix(b.Hash, strings.Repeat("0", difficulty)) {
+		b.Nounce++
+		b.Hash = b.calcularHash()
+	}
 }
 
 func (b *Blockchain) addBlock(from, to string, amount float64) {
@@ -53,20 +63,19 @@ func (b *Blockchain) addBlock(from, to string, amount float64) {
 	}
 	hash := bloco.calcularHash()
 	fmt.Println("hash = ", hash)
-	bloco.Hash = hash
+	bloco.minerar(b.Dificuldade)
 	b.Chain = append(b.Chain, bloco)
 
 }
 
 func main() {
 	fmt.Println("------------------------------------------")
-	blockchain := CreateBlockchain(5)
+	blockchain := CreateBlockchain(4)
 	printJson(blockchain)
 
 	fmt.Println("------------------------------------------")
 	blockchain.addBlock("luciano", "jose", 100)
 	printJson(blockchain)
-
 }
 
 func printJson(obj interface{}) {
@@ -75,5 +84,4 @@ func printJson(obj interface{}) {
 		fmt.Println("Erro: ", err)
 	}
 	fmt.Println(string(str))
-
 }
