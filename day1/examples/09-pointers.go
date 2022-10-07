@@ -15,8 +15,10 @@ func main() {
 
 func inc1(x int) {
 	x++
+	fmt.Println("dentro de incl:", x)
 }
 
 func inc2(x *int) {
 	*x++
+	fmt.Println("dentro de incl2:", *x)
 }

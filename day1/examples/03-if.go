@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	x := 5
+	x := 50
 
 	if x > 6 {
 		fmt.Println("More than 6")

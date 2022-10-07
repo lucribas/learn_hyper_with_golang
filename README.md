@@ -67,3 +67,10 @@ code .
 
 References:
 - https://www.digitalocean.com/community/tutorials/defining-structs-in-go
+
+https://github.com/0xAX/go-algorithms
+
+https://www.youtube.com/watch?v=NF1pwjL9-DE&ab_channel=Computerphile
+https://www.youtube.com/watch?v=NmM9HA2MQGI&ab_channel=Computerphile
+
+

@@ -10,7 +10,7 @@ func main() {
 	result := sum(2, 3)
 	fmt.Println(result)
 
-	result2, err := sqrt(16)
+	result2, err := sqrt(-1)
 	if err != nil {
 		fmt.Println(err)
 	} else {
