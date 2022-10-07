@@ -76,6 +76,11 @@ func main() {
 	fmt.Println("------------------------------------------")
 	blockchain.addBlock("luciano", "jose", 100)
 	printJson(blockchain)
+
+	fmt.Println("------------------------------------------")
+	blockchain.addBlock("luciano", "fran", 10)
+	printJson(blockchain)
+
 }
 
 func printJson(obj interface{}) {
