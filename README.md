@@ -66,6 +66,7 @@ code .
 
 
 References:
+- Go Lang do Zero : https://www.youtube.com/playlist?list=PL5aY_NrL1rjucQqO21QH8KclsLDYu1BIg
 - https://www.digitalocean.com/community/tutorials/defining-structs-in-go
 
 https://github.com/0xAX/go-algorithms
