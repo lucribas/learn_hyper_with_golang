@@ -18,7 +18,7 @@ func main() {
 
 	// The public key is a part of the *rsa.PrivateKey struct
 	publicKey := privateKey.PublicKey
-	msg := []byte("verifiable message")
+	msg := []byte("Este super curso de blockchain")
 
 	// Before signing, we need to hash our message
 	// The hash is what we actually sign
