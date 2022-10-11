@@ -1,0 +1,15 @@
+{
+	"extensions": [
+		"ms-vscode.go",
+		"golang.go",
+		"usernamehw.errorlens",
+		"yzhang.markdown-all-in-one",
+		"shd101wyy.markdown-preview-enhanced",
+		"earshinov.permute-lines",
+		"geocode.spacecadet",
+		"tabnine.tabnine-vscode",
+		"gruntfuggly.todo-tree",
+		"shardulm94.trailing-spaces",
+		"tomoki1207.vscode-input-sequence",
+	]
+}

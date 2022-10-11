@@ -1,0 +1,10 @@
+{
+	"name": "HLFNetwork",
+	"dockerComposeFile": "../../../docker-compose.yaml",
+	"service": "go-container",
+	"workspaceFolder": "/git/chaincode/hello",
+	"extensions": [
+		"ms-vscode.go",
+		"golang.go"
+	]
+}

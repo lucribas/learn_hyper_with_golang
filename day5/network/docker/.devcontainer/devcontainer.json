@@ -1,0 +1,37 @@
+{
+
+	// ------------------------
+	// Docker compose
+	// ------------------------
+	"name": "HLFNetwork",
+	"dockerComposeFile": "../docker-compose.yaml",
+	"service": "cli-network",
+
+	// ------------------------
+	// Docker
+	// ------------------------
+	// "name": "go-container",
+	// "build": {
+	//  // Select one:
+	// 	"dockerfile": "ubuntu/Dockerfile",
+	// 	"dockerfile": "golang/Dockerfile",
+	// },
+
+	// TODO:
+	// check https://code.visualstudio.com/docs/remote/containers-advanced
+	//"workspaceMount": "source=${localWorkspaceFolder}/sub-folder,target=/workspace,type=bind,consistency=delegated",
+	"workspaceFolder": "/git",
+	"extensions": [
+		"ms-vscode.go",
+		"golang.go",
+		"usernamehw.errorlens",
+		"yzhang.markdown-all-in-one",
+		"shd101wyy.markdown-preview-enhanced",
+		"earshinov.permute-lines",
+		"geocode.spacecadet",
+		"tabnine.tabnine-vscode",
+		"gruntfuggly.todo-tree",
+		"shardulm94.trailing-spaces",
+		"tomoki1207.vscode-input-sequence",
+	]
+}

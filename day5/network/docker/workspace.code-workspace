@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"name": "hello",
+			"path": "chaincode/hello"
+		},
+		{
+			"name": "go",
+			"path": "chaincode/marbles/go"
+		},
+		{
+			"name": "git",
+			"path": "."
+		}
+	],
+	"settings": {}
+}

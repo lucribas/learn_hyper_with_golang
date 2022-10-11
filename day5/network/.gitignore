@@ -1,0 +1,7 @@
+# config/
+# crypto-config/
+vendor/
+*.pem
+*_sk
+*.crt
+*.key
