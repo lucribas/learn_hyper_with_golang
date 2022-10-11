@@ -20,7 +20,7 @@ mv curl-amd64 /usr/bin/curl
 alias figlet=echo
 
 export CHANNEL_NAME=devchannel
-export CHAINCODE=energy
+export CHAINCODE=cartorio
 
 export TOP=/opt/gopath/src/github.com/hyperledger/fabric/peer
 cd $TOP
@@ -78,7 +78,7 @@ echo ""
 echo "##### Package chaincode #########"
 echo ""
 cd /chaincode/$CHAINCODE/go/
-go mod init energy
+go mod init cartorio
 go mod vendor
 go get
 go mod tidy
