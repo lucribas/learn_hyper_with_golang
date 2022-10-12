@@ -1,0 +1,75 @@
+#     _   _                       _          _
+#    | | | |_   _ _ __   ___ _ __| | ___  __| | __ _  ___ _ __
+#    | |_| | | | | '_ \ / _ \ '__| |/ _ \/ _` |/ _` |/ _ \ '__|
+#    |  _  | |_| | |_) |  __/ |  | |  __/ (_| | (_| |  __/ |
+#    |_| |_|\__, | .__/ \___|_|  |_|\___|\__,_|\__, |\___|_|
+#           |___/|_|                           |___/
+#     _____     _          _
+#    |  ___|_ _| |__  _ __(_) ___
+#    | |_ / _` | '_ \| '__| |/ __|
+#    |  _| (_| | |_) | |  | | (__
+#    |_|  \__,_|_.__/|_|  |_|\___|
+#
+
+version: '2.1'
+
+volumes:
+  orderer-vm:
+  peer-vm:
+  couchdb:
+  pgdata:
+  walletstore:
+
+networks:
+  blockchain-net:
+
+services:
+
+
+#                          _
+# __   _____  ___ ___   __| | ___
+# \ \ / / __|/ __/ _ \ / _` |/ _ \
+#  \ V /\__ \ (_| (_) | (_| |  __/
+#   \_/ |___/\___\___/ \__,_|\___|
+  vscode-cli-network:
+    container_name: vscode-cli-network
+    image: hyperledger/fabric-tools:2.3
+    tty: true
+    # dns_search: .
+    environment:
+      - GOPATH=/opt/gopath
+      - FABRIC_LOGGING_SPEC=info
+      - CORE_PEER_ID=cli
+      - CORE_PEER_ADDRESS=peer0.org1.example.com:7051
+      - CORE_PEER_LOCALMSPID=Org1MSP
+      - CORE_PEER_TLS_ENABLED=true
+      - CORE_PEER_TLS_CERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/server.crt
+      - CORE_PEER_TLS_KEY_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/server.key
+      - CORE_PEER_TLS_ROOTCERT_FILE=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls/ca.crt
+      - CORE_PEER_MSPCONFIGPATH=/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/peerOrganizations/org1.example.com/users/Admin@org1.example.com/msp
+      - CORE_CHAINCODE_KEEPALIVE=10
+      - FABRIC_CFG_PATH=/var/hyperledger/config
+    working_dir: /opt/gopath/src/github.com/hyperledger/fabric/peer
+    command: /bin/bash
+    volumes:
+        - ./config/:/etc/hyperledger/channel/
+        - ./chaincode:/chaincode
+        - ../../:/git
+        - ./core/:/var/hyperledger/config
+        - ./crypto-config:/opt/gopath/src/github.com/hyperledger/fabric/peer/crypto/
+        - ./crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/msp:/etc/hyperledger/crypto/orderer/msp
+        - ./crypto-config/peerOrganizations/org1.example.com/peers/peer0.org1.example.com/tls:/etc/hyperledger/crypto/peer/tls
+    cap_add:
+        - SYS_PTRACE
+    security_opt:
+        - seccomp:unconfined
+
+    networks:
+      - blockchain-net
+
+    # depends_on:
+    #   - orderer.example.com
+    #   - peer0.org1.example.com
+    #   - couchdb
+
+

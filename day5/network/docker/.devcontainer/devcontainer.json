@@ -4,8 +4,8 @@
 	// Docker compose
 	// ------------------------
 	"name": "HLFNetwork",
-	"dockerComposeFile": "../docker-compose.yaml",
-	"service": "cli-network",
+	"dockerComposeFile": "../docker-compose-vscode.yaml",
+	"service": "vscode-cli-network",
 
 	// ------------------------
 	// Docker

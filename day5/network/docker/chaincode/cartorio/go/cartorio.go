@@ -24,7 +24,7 @@ func NewCC() *router.Chaincode {
 
 	// Set method
 	r.Query(`imovelSetValue`, SetValue, param.String("inscricao"), param.String("value"))
-	
+
 	// Query(`imovelSetCpnj`, SetCnpj, param.String("inscricao"), param.String("cnpj")).
 	// Query(`imovelSetCpf`, SetCpf, param.String("inscricao"), param.String("cpf")).
 
