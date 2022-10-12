@@ -1,9 +1,9 @@
 // peer chaincode query -C devchannel --name cartorio -c '{"Args":["imovelGet","123213"]}'
 
-
 // https://hyperledger.github.io/fabric-gateway/
 // https://github.com/hyperledger/fabric-samples/blob/main/asset-transfer-basic/application-go/assetTransfer.go
 
+// ERROR: https://github.com/hyperledger/fabric-sdk-go/issues/246
 package main
 
 import (

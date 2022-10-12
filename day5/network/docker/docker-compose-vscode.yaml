@@ -33,7 +33,7 @@ services:
 #   \_/ |___/\___\___/ \__,_|\___|
   vscode-cli-network:
     container_name: vscode-cli-network
-    image: hyperledger/fabric-tools:2.3
+    image: hyperledger/fabric-tools:2.4
     tty: true
     # dns_search: .
     environment:
