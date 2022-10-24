@@ -75,3 +75,18 @@ https://www.youtube.com/watch?v=NF1pwjL9-DE&ab_channel=Computerphile
 https://www.youtube.com/watch?v=NmM9HA2MQGI&ab_channel=Computerphile
 
 https://github.com/avelino/awesome-go
+
+
+
+
+-----
+new directory:
+
+mkdir exX
+cd exX
+add your file.go
+go mod init
+go mod tidy
+go work use .
+
+go run file.go

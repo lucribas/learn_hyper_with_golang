@@ -5,6 +5,7 @@ use (
 	./day1/ex1_solved
 	./day2/ex1
 	./day2/ex2
+	./day2/ex3
 	./day2/ex5
 	./day3/ex2
 )
