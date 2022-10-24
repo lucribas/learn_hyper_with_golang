@@ -134,16 +134,3 @@ func EncodeWallet(publicKey []byte) (wallet string) {
 	// log.Printf("base58=%s\n", encoded)
 	return encoded
 }
-
-// https://privatekeys.pw/puzzles/bitcoin-puzzle-tx
-// puzzle
-// https://bitcointalk.org/index.php?topic=5166284
-// 16jY7qLJnxb7CHZyqBP8qca9d51gAjyXQN
-// 9223372036854775807
-// 18446744073709551615
-
-// performance amd x12nucleos
-// 71khashes/s
-// 9223372036854775807/71000
-// 129906648406405s
-// 4.119.312 anos
