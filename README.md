@@ -85,7 +85,7 @@ new directory:
 mkdir exX
 cd exX
 add your file.go
-go mod init
+go mod init example.com/day2/ex7/server
 go mod tidy
 go work use .
 

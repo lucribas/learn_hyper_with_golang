@@ -7,5 +7,8 @@ use (
 	./day2/ex2
 	./day2/ex3
 	./day2/ex5
+	./day2/ex7
+	./day2/ex8
+	./day2/examples
 	./day3/ex2
 )
