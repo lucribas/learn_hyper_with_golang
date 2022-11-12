@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package api;
+
+option go_package = "infrastructure/server/grpc";
+
+message User {
+	string name = 1;
+	repeated double coordinates = 2;
+}
+
+message GetByIDInput {
+	string id = 1;
+}
+
+service UserService {
+	rpc GetByID(GetByIDInput) returns (User);
+}
